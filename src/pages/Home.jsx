@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 export default function Home() {
   return (
     <div className="bg-gray-900 text-white min-h-screen pt-20 px-6">
-      
       {/* Hero Section */}
       <section className="max-w-6xl h-[90vh] mx-auto flex flex-col justify-center items-center text-center">
         <h1 className="text-4xl md:text-6xl font-extrabold mb-6 leading-tight">
@@ -33,28 +32,37 @@ export default function Home() {
 
       {/* Experience Section */}
       <section className="max-w-5xl mx-auto py-16">
-        <h2 className="text-3xl font-semibold mb-10 text-center">
-          Experience
-        </h2>
+        <h2 className="text-3xl font-semibold mb-10 text-center">Experience</h2>
 
         <div className="space-y-6">
           <div className="bg-gray-800 p-6 rounded-xl shadow-md hover:shadow-lg transition duration-300">
-            <h3 className="text-xl font-bold">
-              Web Development Intern
-            </h3>
+            <h3 className="text-xl font-bold">Freelance Software Developer</h3>
+
+            <p className="text-gray-400 text-sm mt-1">
+              Self-Employed • 2025 - Present
+            </p>
+
+            <p className="mt-3 text-gray-300 leading-relaxed">
+              Working as a freelance developer building full-stack web
+              applications using the MERN stack and Next.js. Focused on
+              delivering responsive, high-performance solutions with clean
+              architecture and modern UI/UX practices.
+            </p>
+          </div>
+          <div className="bg-gray-800 p-6 rounded-xl shadow-md hover:shadow-lg transition duration-300">
+            <h3 className="text-xl font-bold">Web Development Intern</h3>
 
             <p className="text-gray-400 text-sm mt-1">
               Sriyog • Nov 2025 - Mar 2026
             </p>
 
             <p className="mt-3 text-gray-300 leading-relaxed">
-              Worked on building scalable web applications using React and Next.js,
-              focusing on performance optimization and clean UI design.
+              Worked on building scalable web applications using React and
+              Next.js, focusing on performance optimization and clean UI design.
             </p>
           </div>
         </div>
       </section>
-
     </div>
   );
 }
