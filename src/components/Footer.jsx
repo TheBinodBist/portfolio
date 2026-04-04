@@ -10,11 +10,11 @@ const Footer = () => {
           © {new Date().getFullYear()} Binod Bist. All rights reserved.
         </p>
 
-        <div className="flex gap-6 text-gray-400 text-sm">
+        {/* <div className="flex gap-6 text-gray-400 text-sm">
           <Link to="/" className="hover:text-white transition">Home</Link>
           <Link to="/projects" className="hover:text-white transition">Projects</Link>
           <Link to="/contact" className="hover:text-white transition">Contact</Link>
-        </div>
+        </div> */}
 
       </div>
     </footer>
