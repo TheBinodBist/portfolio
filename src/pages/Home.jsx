@@ -31,7 +31,7 @@ export default function Home() {
       </section>
 
       {/* Experience Section */}
-      <section className="max-w-5xl mx-auto py-16">
+      {/* <section className="max-w-5xl mx-auto py-16">
         <h2 className="text-3xl font-semibold mb-10 text-center">Experience</h2>
 
         <div className="space-y-6">
@@ -62,7 +62,7 @@ export default function Home() {
             </p>
           </div>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 }
