@@ -20,13 +20,13 @@ export default function Contact() {
 
           {/* Email */}
           <a
-            href="mailto:thebinodbist@gmail.com"
+            href="mailto:binodbist.dev@gmail.com"
             className="bg-gray-800 p-6 rounded-xl hover:bg-gray-700 transition group"
           >
             <MdEmail className="mx-auto mb-4 group-hover:text-blue-400" size={32} />
             <h2 className="text-lg font-semibold">Email</h2>
             <p className="text-gray-400 text-sm mt-2">
-              thebinodbist@gmail.com
+              binodbist.dev@gmail.com
             </p>
           </a>
 
