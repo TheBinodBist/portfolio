@@ -8,7 +8,7 @@ export default function About() {
 
         {/* Intro */}
         <p className="text-gray-400 mb-10 leading-relaxed max-w-3xl">
-          I'm a passionate full-stack developer focused on building scalable,
+          I'm a passionate full-stack web and mobile developer focused on building scalable,
           high-performance, and user-friendly applications. I enjoy turning
           complex problems into simple, elegant solutions while constantly
           learning new technologies and improving my craft.
@@ -56,6 +56,8 @@ export default function About() {
                 "MongoDB",
                 "Tailwind CSS",
                 "React Native",
+                "Expo",
+                "Nativewind"
               ].map((skill, index) => (
                 <span
                   key={index}
