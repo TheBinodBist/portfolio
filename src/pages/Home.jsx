@@ -10,7 +10,7 @@ export default function Home() {
         </h1>
 
         <p className="text-gray-400 max-w-xl mx-auto text-lg">
-          Full Stack Developer passionate about building modern web apps.
+          Full Stack Web and Mobile Developer passionate about building modern web apps.
         </p>
 
         <div className="mt-10 flex flex-wrap justify-center gap-4">
