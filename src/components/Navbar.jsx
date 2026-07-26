@@ -1,84 +1,122 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { Menu, X } from "lucide-react";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   const navLinks = [
-    { name: "Home", href: "/" },
-    { name: "About", href: "/about" },
-    { name: "Projects", href: "/projects" },
-    { name: "Contact", href: "/contact" },
+    { name: "About me", href: "/about" },
+    { name: "Skills", href: "/skills" },
+    { name: "Portfolio", href: "/projects" },
   ];
 
   return (
-    <nav className="bg-gray-900 text-white fixed w-full z-50 shadow-md">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
-          
-          {/* Logo */}
-          <div className="text-xl font-bold tracking-wide">
-            Binod Bist
-          </div>
+    <nav className="fixed top-0 left-0 right-0 z-50">
+      <div className="bg-black text-white">
 
-          {/* Desktop Menu */}
-          <div className="hidden md:flex space-x-8">
+        {/* Main Navbar */}
+        <div className="h-14 md:h-8 px-5 md:px-7 flex items-center justify-between">
+
+          {/* Mobile Logo */}
+          <Link
+            to="/"
+            className="font-black italic text-xl md:hidden"
+          >
+            B
+          </Link>
+
+          {/* Desktop Links */}
+          <div className="hidden md:flex items-center justify-end w-full gap-9 text-[9px] font-medium">
             {navLinks.map((link) => (
               <Link
                 key={link.name}
                 to={link.href}
-                className="hover:text-blue-400 transition duration-300"
+                className="hover:text-gray-300 transition"
               >
                 {link.name}
               </Link>
             ))}
+
+            <Link
+              to="/contact"
+              className="
+                bg-white
+                text-black
+                rounded-full
+                px-4
+                py-1.5
+                text-[8px]
+                font-semibold
+                hover:bg-gray-200
+                transition
+              "
+            >
+              CONTACT ME
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="md:hidden">
-            <button onClick={() => setIsOpen(!isOpen)}>
-              <svg
-                className="w-6 h-6"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                {isOpen ? (
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M6 18L18 6M6 6l12 12"
-                  />
-                ) : (
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M4 6h16M4 12h16M4 18h16"
-                  />
-                )}
-              </svg>
-            </button>
-          </div>
+          <button
+            type="button"
+            onClick={() => setIsOpen(!isOpen)}
+            className="md:hidden text-white"
+            aria-label={isOpen ? "Close menu" : "Open menu"}
+          >
+            {isOpen ? (
+              <X size={27} strokeWidth={2} />
+            ) : (
+              <Menu size={27} strokeWidth={2} />
+            )}
+          </button>
         </div>
-      </div>
 
-      {/* Mobile Menu */}
-      {isOpen && (
-        <div className="md:hidden bg-gray-800 px-4 pb-4 space-y-2">
-          {navLinks.map((link) => (
-            <Link
-              key={link.name}
-              to={link.href}
-              className="block py-2 border-b border-gray-700 hover:text-blue-400"
-              onClick={() => setIsOpen(false)}
-            >
-              {link.name}
-            </Link>
-          ))}
-        </div>
-      )}
+        {/* Mobile Menu */}
+        {isOpen && (
+          <div className="md:hidden border-t border-white/10 px-5 pb-5 pt-3">
+            <div className="flex flex-col gap-3">
+
+              <Link
+                to="/"
+                onClick={() => setIsOpen(false)}
+                className="text-sm hover:text-gray-300 transition"
+              >
+                Home
+              </Link>
+
+              {navLinks.map((link) => (
+                <Link
+                  key={link.name}
+                  to={link.href}
+                  onClick={() => setIsOpen(false)}
+                  className="text-sm hover:text-gray-300 transition"
+                >
+                  {link.name}
+                </Link>
+              ))}
+
+              <Link
+                to="/contact"
+                onClick={() => setIsOpen(false)}
+                className="
+                  inline-flex
+                  w-fit
+                  bg-white
+                  text-black
+                  rounded-full
+                  px-5
+                  py-2
+                  text-xs
+                  font-semibold
+                "
+              >
+                CONTACT ME
+              </Link>
+
+            </div>
+          </div>
+        )}
+      </div>
     </nav>
   );
 }
