@@ -19,18 +19,12 @@ export default function About() {
           <div className="bg-gray-800 p-5 rounded-xl shadow hover:shadow-lg transition">
             <h3 className="font-semibold text-lg mb-2">Experience</h3>
             <p className="text-gray-400 text-sm">
-              Worked on real-world web apps with authentication, dashboards,
+              Worked on real-world web and mobile apps with authentication, dashboards,
               and scalable backend systems.
             </p>
           </div>
 
-          <div className="bg-gray-800 p-5 rounded-xl shadow hover:shadow-lg transition">
-            <h3 className="font-semibold text-lg mb-2">Projects</h3>
-            <p className="text-gray-400 text-sm">
-              Built multi-tenant systems, modern UI apps, and full-stack
-              solutions using MERN stack.
-            </p>
-          </div>
+          
 
           <div className="bg-gray-800 p-5 rounded-xl shadow hover:shadow-lg transition">
             <h3 className="font-semibold text-lg mb-2">Focus</h3>
@@ -51,11 +45,13 @@ export default function About() {
               {[
                 "React",
                 "Next.js",
-                "Node.js",
-                "Express",
-                "MongoDB",
-                "Tailwind CSS",
+                "Django",
+                "Django REST",
                 "React Native",
+                "Postgres",
+                "MongoDB",
+                "MySQL",
+                "Tailwind CSS",
                 "Expo",
                 "Nativewind"
               ].map((skill, index) => (
